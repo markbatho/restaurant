@@ -1,8 +1,74 @@
-nav {
-    display: flex;
-    gap: 16px;
+@font-face {
+  font-family: 'Niconne';
+  src: url('./Niconne-Regular.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
 }
 
-nav > a {
-    cursor: pointer;
+@font-face {
+  font-family: 'Lora';
+  src: url('./Lora-Regular.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lora Bold';
+  src: url('./Lora-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 18px;
+  margin-left: 18px;
+  margin-right: 18px;
+  height: calc(100vh - 18px);
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+nav > .container {
+  margin: 0;
+}
+
+.brand {
+  font-family: 'Niconne';
+  font-size: 36px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-list a {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
 }

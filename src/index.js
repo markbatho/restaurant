@@ -1,3 +1,4 @@
+import Container from './components/container';
 import Home from './components/home/home';
 import Contact from './components/contact/contact';
 import Menu from './components/menu/menu';
@@ -5,27 +6,38 @@ import Menu from './components/menu/menu';
 import './style.css';
 
 const app = (content) => {
-  let activePage = Home();
+  let activePage = Home(setActivePage);
 
   const nav = document.createElement('nav');
+  const container = Container();
+  const brandLink = document.createElement('a');
   const homeLink = document.createElement('a');
   const contactLink = document.createElement('a');
   const menuLink = document.createElement('a');
 
+  brandLink.textContent = 'Ristorante Gustosa';
+  brandLink.href = '#';
+  brandLink.onclick = () => setActivePage(Home(setActivePage));
+  brandLink.classList.add('brand');
+  
   homeLink.textContent = 'Home';
   contactLink.textContent = 'Contact';
   menuLink.textContent = 'Menu';
 
-  nav.appendChild(homeLink);
-  nav.appendChild(contactLink);
-  nav.appendChild(menuLink);
+  container.classList.add('nav-list');
 
-  Array.from(nav.childNodes).forEach(link => {
+  nav.appendChild(brandLink);
+  nav.appendChild(container);
+  container.appendChild(homeLink);
+  container.appendChild(menuLink);
+  container.appendChild(contactLink);
+  
+  Array.from(container.childNodes).forEach(link => {
     link.addEventListener('click', () => {
       let page;
       switch(link.textContent) {
       case 'Home':
-        page = Home();
+        page = Home(setActivePage);
         break;
       case 'Contact':
         page = Contact();
@@ -34,11 +46,11 @@ const app = (content) => {
         page = Menu();
         break;
       default:
-        page = Home();
+        page = Home(setActivePage);
       }
 
       setActivePage(page);
-    })
+    });
   });
 
   content.appendChild(nav);
