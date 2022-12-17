@@ -64,7 +64,14 @@ nav > .container {
 }
 
 .nav-list a {
+  font-family: 'Lora';
+  font-size: 16px;
+  text-transform: uppercase;
   cursor: pointer;
+}
+
+.nav-list a:hover {
+  color: #c59d5f;
 }
 
 .container {

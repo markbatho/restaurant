@@ -1,0 +1,19 @@
+{
+  "list": [
+    {
+      "title": "Apple Gorgonzola",
+      "desc": "Lorem ipsum dolor sit amec consectetur",
+      "price": "$15"
+    },
+    {
+      "title": "Chopped Antipasti",
+      "desc": "Lorem ipsum dolor sit amec consectetur",
+      "price": "$20"
+    },
+    {
+      "title": "Caesar",
+      "desc": "Lorem ipsum dolor sit amec consectetur",
+      "price": "$12"
+    }
+  ]
+}

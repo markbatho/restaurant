@@ -1,0 +1,24 @@
+{
+  "list": [
+    {
+      "title": "Lasagna",
+      "desc": "Lorem ipsum dolor sit amec consectetur",
+      "price": "$25"
+    },
+    {
+      "title": "Spaghetti Marianara",
+      "desc": "Lorem ipsum dolor sit amec consectetur",
+      "price": "$30"
+    },
+    {
+      "title": "Spaghetti with Meatball",
+      "desc": "Lorem ipsum dolor sit amec consectetur",
+      "price": "$20"
+    },
+    {
+      "title": "Spicy Chicken Rigatoni",
+      "desc": "Lorem ipsum dolor sit amec consectetur",
+      "price": "$40"
+    }
+  ]
+}
