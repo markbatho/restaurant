@@ -1,74 +1,55 @@
 .home {
-  position: relative;
   display: flex;
-  background-image: url('./bg.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   height: 100%;
-  width: 100%;
-  align-items: center;
-}
-
-.home > .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 70%;
-  z-index: 10;
 }
 
 .home > .container {
   position: relative;
+}
+
+.home > .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   height: 100%;
-  text-align: center;
-  z-index: 20;
 }
 
-.home > .container > h1, p {
-  max-width: 576px;
-  color: white;
-  margin: 0;
-}
-
-.home > .container > h1 {
+.home h1 {
   font-family: 'Niconne';
-  font-size: 56px;
+  font-size: 52px;
   color: #c59d5f;
 }
 
-.home > .container > p {
-  font-family: 'Lora';
-  font-size: 20px;
-  line-height: 32px;
+.home h1, p, i {
+  text-align: center;
+  max-width: 576px;
+  margin: 0;
 }
 
-.home > .container > i {
-  font-family: 'Lora';
+.home p, i {
   font-size: 18px;
-  color: white;
+  color: #f2f2f2;
 }
 
-.home > .container > button {
-  border: none;
-  border: 2px solid white;
-  padding: 14px 36px;
-  cursor: pointer;
-  font-family: 'Lora Bold';
-  font-size: 18px;
-  color: white;
+.home p {
+  line-height: 28px;
+}
+
+.home button {
+  border: 0;
+  border: 2px solid #c59d5f;
+  color: #c59d5f;
   background-color: transparent;
+  padding: 14px 32px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 16px;
 }
 
-.home > .container > button:hover {
-  background-color: white;
-  color: black;
+.home button:hover {
+  background-color: #c59d5f;
+  color: #f2f2f2;
 }

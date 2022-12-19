@@ -1,8 +1,79 @@
 .menu {
-  
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
 }
 
-.menu > .container {
+.menu-list {
   display: flex;
   flex-direction: column;
+  /* background-color: white; */
+  background-color: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(16px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 80vh;
+  overflow-x: scroll;
+  padding: 36px !important;
+  gap: 36px;
+}
+
+.menu-list hr {
+  width: 100%;
+}
+
+.menu-list h1 {
+  font-family: 'Lora Bold';
+  text-align: center;
+  margin: 0;
+  color: #c59d5f;
+}
+
+.menu-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: white;
+}
+
+.menu-list ul h2 {
+  width: min-content;
+  margin: 0;
+  color: #c59d5f;
+}
+
+.menu-list ul li {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.menu-list ul li div:first-child {
+  /* font-family: 'Lora Bold'; */
+  font-size: 18px;
+  grid-column: 1 / 2;
+}
+
+.menu-list ul li div:first-child::after {
+  border-bottom: 1px dotted black;
+  content: '';
+}
+
+.menu-list ul li div:nth-child(2) {
+  font-size: 16px;
+  /* color: #1E1E1E; */
+  color: #ccc;
+  grid-row: 2 / 3;
+}
+
+.menu-list ul li div:last-child {
+  /* font-family: 'Lora Bold'; */
+  font-size: 18px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }

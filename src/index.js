@@ -9,30 +9,39 @@ const app = (content) => {
   let activePage = Home(setActivePage);
 
   const nav = document.createElement('nav');
+
+  const overlay = document.createElement('div');
+  
   const container = Container();
+  const navList = Container();
+
   const brandLink = document.createElement('a');
   const homeLink = document.createElement('a');
   const contactLink = document.createElement('a');
   const menuLink = document.createElement('a');
 
+  overlay.classList.add('overlay');
+  navList.classList.add('nav-list');
+  container.classList.add('container');
+
   brandLink.textContent = 'Ristorante Gustosa';
   brandLink.href = '#';
   brandLink.onclick = () => setActivePage(Home(setActivePage));
   brandLink.classList.add('brand');
-  
+
   homeLink.textContent = 'Home';
   contactLink.textContent = 'Contact';
   menuLink.textContent = 'Menu';
 
-  container.classList.add('nav-list');
+  navList.appendChild(homeLink);
+  navList.appendChild(menuLink);
+  navList.appendChild(contactLink);
 
-  nav.appendChild(brandLink);
+  container.appendChild(brandLink);
+  container.appendChild(navList);
   nav.appendChild(container);
-  container.appendChild(homeLink);
-  container.appendChild(menuLink);
-  container.appendChild(contactLink);
   
-  Array.from(container.childNodes).forEach(link => {
+  Array.from(navList.childNodes).forEach(link => {
     link.addEventListener('click', () => {
       let page;
       switch(link.textContent) {
@@ -54,6 +63,7 @@ const app = (content) => {
   });
 
   content.appendChild(nav);
+  content.appendChild(overlay);
   content.appendChild(activePage);
 
   function setActivePage(page) {

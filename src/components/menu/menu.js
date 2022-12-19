@@ -11,11 +11,11 @@ export default function Menu() {
   const h1 = document.createElement('h1');
   const container = Container();
   
-  const saladList = MenuList(salads);
-  const pastaList = MenuList(pastas);
-  const dessertList = MenuList(desserts);
+  const saladList = MenuList('Salads', salads);
+  const pastaList = MenuList('Pastas', pastas);
+  const dessertList = MenuList('Desserts', desserts);
 
-  h1.textContent = 'Menu Page';
+  h1.textContent = 'Discover Our Menu';
 
   menu.classList.add('menu');
   container.classList.add('menu-list');
