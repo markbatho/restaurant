@@ -22,13 +22,16 @@
   color: #c59d5f;
 }
 
-.home h1, p, i {
+.home h1,
+.home p,
+.home i {
   text-align: center;
   max-width: 576px;
   margin: 0;
 }
 
-.home p, i {
+.home p,
+.home i {
   font-size: 18px;
   color: #f2f2f2;
 }

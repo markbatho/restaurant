@@ -1,0 +1,97 @@
+.contact {
+  display: flex;
+  height: 100%;
+}
+
+.contact > .container {
+  display: flex;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 512px;
+  gap: 16px;
+}
+
+.contact-info h1 {
+  font-family: 'Lora Bold';
+  margin: 0;
+  color: #c59d5f;
+}
+
+.contact-info p {
+  margin: 0;
+  color: #f2f2f2;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  padding: 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  color: white;
+  font-size: 18px;
+}
+
+input {
+  font-family: 'Lora';
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 0;
+  border: none;
+}
+
+input:focus {
+  outline: 2px solid #c59d5f;
+}
+
+textarea {
+  font-family: 'Lora';
+  font-size: 16px;
+  padding: 8px;
+  resize: vertical;
+  border-radius: 0;
+  border: none;
+}
+
+textarea:focus {
+  outline: 2px solid #c59d5f;
+}
+
+form button {
+  font-family: 'Lora Bold';
+  font-size: 16px;
+  border: none;
+  background-color: #c59d5f;
+  padding: 16px 32px;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+   background-color: #b48641;
+}
+
